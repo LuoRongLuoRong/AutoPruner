@@ -11,6 +11,8 @@ This repository contains source code of research paper "AutoPruner: Transformer-
 }
 ```
 
+注意，先把 requirments 看完再看 Structure。
+
 ## Structure
 The structure of our source code's repository is as follows:
 - config: contains our experimental configurations;
@@ -80,9 +82,23 @@ python3 -m src.training.main --config_path [config path]
                              --model_path [path to saved model (for saving in train mode and loading in test mode)]
 ```
 
+数据集下载下来后的名字是 data.tar.gz，使用 `tar -xvf data.tar.gz` 进行解压，解压位置在 AutoPruner 文件夹同目录下。解压后的结构是：
+```
+├── AutoPruner
+├── replication_package
+└── data.tar.gz
+```
+
 To replicate the result of AutoPruner, please down the data from this [link](https://zenodo.org/record/6369874#.YjWzmi8RppR) and put in the same folder with this repository, then run following below instructions. Note that, our results may be slightly different when running on different devices. However, this diffences does not affect our findings in the paper. 
 
 ### RQ1
+
+RQ1 想要验证 AutoPruner 的有效性。`Is AutoPruner effective in pruning false positives from static call graphs?` 那么如何验证一个方法的有效性呢？
+
+todo: 
+
+#### 具体实验
+
 To replicate the result of AutoPruner in call graph pruning on Wala (RQ1), please use
 ```
 bash script/rq1_wala.sh

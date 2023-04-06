@@ -3,6 +3,8 @@ import logging
 import os
 from sklearn.metrics import confusion_matrix
 import math
+
+# 从指定路径读取配置文件，并将配置参数存储在 config 变量中
 def read_config_file(config_file):
     configs = {}
     with open(config_file) as f:
